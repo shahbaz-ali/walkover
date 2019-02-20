@@ -1,3 +1,5 @@
+package server;
+
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.EventLoopGroup;
@@ -5,18 +7,19 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
+import walkover.interfaces.RestAPI;
 
-public final class HttpSnoopServer {
+public final class HttpWalkOverServer {
     static final boolean SSL = System.getProperty("ssl") != null;
     static final int port = Integer.parseInt(System.getProperty("port",SSL?"8443":"8080"));
     private RestAPI app;
-    private HttpSnoopServerIntializer intializer;
-    public HttpSnoopServer(HttpSnoopServerIntializer intializer, RestAPI app){
+    private HttpWalkOverIntializer intializer;
+    public HttpWalkOverServer(HttpWalkOverIntializer intializer, RestAPI app){
         this.app = app;
         this.intializer = intializer;
     }
 
-    public  void main() throws Exception {
+    public  void ini() throws Exception {
         EventLoopGroup bossGroup = new NioEventLoopGroup(1);
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try{

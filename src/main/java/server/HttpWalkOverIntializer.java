@@ -1,15 +1,18 @@
+package server;
+
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.handler.codec.http.HttpRequestDecoder;
 import io.netty.handler.codec.http.HttpResponseEncoder;
+import walkover.interfaces.RestAPI;
 
-public class HttpSnoopServerIntializer extends ChannelInitializer<SocketChannel> {
+public class HttpWalkOverIntializer extends ChannelInitializer<SocketChannel> {
 
     private RestAPI ex;
-    private HttpSnoopServerHandler handler;
+    private HttpWalkOverHandler handler;
 
-    public HttpSnoopServerIntializer(RestAPI app, HttpSnoopServerHandler handler){
+    public HttpWalkOverIntializer(RestAPI app, HttpWalkOverHandler handler){
         this.ex = app;
         this.handler = handler;
     }
