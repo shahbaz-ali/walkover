@@ -19,12 +19,12 @@ public class TestDemo {
 
     }
 
-    @RegisterRoute(method = "GET", route = "/api/tweet")
+    @RegisterRoute(method = "POST", route = "/api/tweet")
     public void tweet_GET(){
         WalkOver.getInstance().write("{\"success\":true,\"message\":\"Display Not Found\"}");
     }
 
-    @RegisterRoute(method = "GET", route = "/api/tweet")
+    @RegisterRoute(method = "DELETE", route = "/api/tweet")
     public void duplicate_GET(){
         WalkOver.getInstance().write("{\"success\":true,\"message\":\"Duplicate\"}");
     }

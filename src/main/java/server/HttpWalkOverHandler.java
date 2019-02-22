@@ -44,13 +44,13 @@ public class HttpWalkOverHandler extends SimpleChannelInboundHandler<Object> {
             if (request.method().toString().equals("GET")){
                 this.app.get(this);
             }else if(request.method().toString().equals("POST")){
-                this.app.post();
+                this.app.post(this);
             }else if(request.method().toString().equals("PUT")){
-                this.app.put();
+                this.app.put(this);
             }else if(request.method().toString().equals("UPDATE")){
-                this.app.update();
+                this.app.update(this);
             }else if (request.method().toString().equals("DELETE")){
-                this.app.delete();
+                this.app.delete(this);
             }else {
                 FullHttpResponse error = new DefaultFullHttpResponse(HTTP_1_1, HttpResponseStatus.BAD_REQUEST);
                 error.headers().set(HttpHeaderNames.CONTENT_TYPE, "text/html; charset=UTF-");

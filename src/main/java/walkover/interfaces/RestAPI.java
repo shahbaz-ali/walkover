@@ -4,8 +4,8 @@ import server.HttpWalkOverHandler;
 
 public interface RestAPI {
     public void get(HttpWalkOverHandler handler);
-    public void put();
-    public void delete();
-    public void update();
-    public void post();
+    public void put(HttpWalkOverHandler handler);
+    public void delete(HttpWalkOverHandler handler);
+    public void update(HttpWalkOverHandler handler);
+    public void post(HttpWalkOverHandler handler);
 }

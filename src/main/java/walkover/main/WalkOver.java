@@ -62,19 +62,129 @@ public class WalkOver implements RestAPI {
         }
     }
 
-    public void put() {
+    public void put(HttpWalkOverHandler handler) {
+        if (!mRegisteredRouterClases.isEmpty()) {
+
+            for (Object clazz : mRegisteredRouterClases) {
+
+                for (Method method : clazz.getClass().getMethods()) {
+
+                    if (method.isAnnotationPresent(RegisterRoute.class)) {
+
+                        if (method.getAnnotation(RegisterRoute.class).method().equals("PUT") && method.getAnnotation(RegisterRoute.class).route().equals(handler.request.uri())) {
+                            try {
+                                method.invoke(clazz, null);
+                                break;
+                            } catch (IllegalAccessException e) {
+                                e.printStackTrace();
+                            } catch (InvocationTargetException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                }
+            }
+
+            handler.send404();
+
+        } else {
+            System.out.println("No Routes Present..");
+        }
 
     }
 
-    public void delete() {
+    public void delete(HttpWalkOverHandler handler) {
+        if (!mRegisteredRouterClases.isEmpty()) {
+
+            for (Object clazz : mRegisteredRouterClases) {
+
+                for (Method method : clazz.getClass().getMethods()) {
+
+                    if (method.isAnnotationPresent(RegisterRoute.class)) {
+
+                        if (method.getAnnotation(RegisterRoute.class).method().equals("DELETE") && method.getAnnotation(RegisterRoute.class).route().equals(handler.request.uri())) {
+                            try {
+                                method.invoke(clazz, null);
+                                break;
+                            } catch (IllegalAccessException e) {
+                                e.printStackTrace();
+                            } catch (InvocationTargetException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                }
+            }
+
+            handler.send404();
+
+        } else {
+            System.out.println("No Routes Present..");
+        }
+
 
     }
 
-    public void update() {
+    public void update(HttpWalkOverHandler handler) {
+        if (!mRegisteredRouterClases.isEmpty()) {
+
+            for (Object clazz : mRegisteredRouterClases) {
+
+                for (Method method : clazz.getClass().getMethods()) {
+
+                    if (method.isAnnotationPresent(RegisterRoute.class)) {
+
+                        if (method.getAnnotation(RegisterRoute.class).method().equals("UPDATE") && method.getAnnotation(RegisterRoute.class).route().equals(handler.request.uri())) {
+                            try {
+                                method.invoke(clazz, null);
+                                break;
+                            } catch (IllegalAccessException e) {
+                                e.printStackTrace();
+                            } catch (InvocationTargetException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                }
+            }
+
+            handler.send404();
+
+        } else {
+            System.out.println("No Routes Present..");
+        }
+
 
     }
 
-    public void post() {
+    public void post(HttpWalkOverHandler handler) {
+        if (!mRegisteredRouterClases.isEmpty()) {
+
+            for (Object clazz : mRegisteredRouterClases) {
+
+                for (Method method : clazz.getClass().getMethods()) {
+
+                    if (method.isAnnotationPresent(RegisterRoute.class)) {
+
+                        if (method.getAnnotation(RegisterRoute.class).method().equals("POST") && method.getAnnotation(RegisterRoute.class).route().equals(handler.request.uri())) {
+                            try {
+                                method.invoke(clazz, null);
+                                break;
+                            } catch (IllegalAccessException e) {
+                                e.printStackTrace();
+                            } catch (InvocationTargetException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                }
+            }
+
+            handler.send404();
+
+        } else {
+            System.out.println("No Routes Present..");
+        }
 
     }
 
