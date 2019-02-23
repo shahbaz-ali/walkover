@@ -1,3 +1,5 @@
+<img src="walkover.png" width="150" height="150"/>
+
 # WalkOver
 > WalkOver is a library to create simple and light weight web services in Java and Android
 
