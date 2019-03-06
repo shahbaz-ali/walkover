@@ -7,6 +7,7 @@
 Lead Maintainer: [Shahbaz Ali](https://github.com/shahbaz-ali)
 
  > - Contributor: [Nadeem Bhat](https://github.com/NadeemBhat)
+ > - Contributor: [Atiq ur Rehman](https://github.com/atiq-ur-rehman)
 
 
 ## Introduction
