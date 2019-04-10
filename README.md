@@ -6,9 +6,6 @@
 
 Lead Maintainer: [Shahbaz Ali](https://github.com/shahbaz-ali)
 
- > - Contributor: [Nadeem Bhat](https://github.com/NadeemBhat)
- > - Contributor: [Atiq ur Rehman](https://github.com/atiq-ur-rehman)
-
 
 ## Introduction
 >`walkover` is a simple and easy way of building RESTful web services in Java and Android, Using `walkover` you can create API's using REST architecture. `walkover` has been built keeping simplicity in mind so that developers can focus on the API logic rather than spending time on writing network logic for there applications.
@@ -17,25 +14,7 @@ Lead Maintainer: [Shahbaz Ali](https://github.com/shahbaz-ali)
 
 >Add `walkover` to your project
 
-#### via Gradle
-```groovy
-implementation 'io.walkover:walkover:1.0.0'
-```
-#### via Maven
-```xml
-<dependency>
-<groupId>io.walkover</groupId>
-<artifactId>walkover</artifactId>
-<version>1.0.0</version>
-</dependency>
-```
-> or download the latest JAR from Maven Central.
 
-#### Features
-
-  * Robust routing
-  * Focus on high performance
-  * HTTP helpers (redirection, caching, etc)
   
 ## Quick Start
 > The quickest way of getting started with `walkover` is to add the jar into your project and then start using the defined intreface to create API's.
