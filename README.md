@@ -71,4 +71,8 @@ public void onStart() {
 ```
 Read the full getting started guide.
 
+## License
 
+MIT License
+
+Copyright (c) 2019 Shahbaz Ali
