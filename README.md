@@ -1,7 +1,7 @@
 <img src="walkover.png" width="150" height="150"/>
 
 # WalkOver
-> WalkOver is a library to create simple and light weight REST API's in Java and Android
+> WalkOver is a library to create simple and light weight REST API in Java for Android, Walkover in not meant for consuming REST API but its meant for creating REST API :)
 
 
 Lead Maintainer: [Shahbaz Ali](https://github.com/shahbaz-ali)
